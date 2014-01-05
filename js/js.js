@@ -28,18 +28,22 @@ function click_event (argument) {
       //Inicio
       url = "php/inicio.php";
     break;
-    //case 1:
+    /*
+    case 1:
       //Ginecología y Obstreticia
-      //url = "php/ginecologia/ginecologia.php";
-    //break;
+      url = "php/ginecologia/ginecologia.php";
+    break;
+    */
     case 2:
       //Depilación Láser Médico
       url = "php/dlm/depilacion_laser_medico.php";
     break;
-    //case 3:
+    /*
+    case 3:
       //Psicología para adultos
-      //url = "php/psicologia/adultos.php";
-    //break;
+      url = "php/psicologia/adultos.php";
+    break;
+    */
     case 4:
       //Psicología Infanto Juvenil Trastornos de Conducta
       url = "php/psicologia/infanto_juvenil/trastorno_conducta.php";
@@ -74,11 +78,11 @@ function click_event (argument) {
     break;
     case 12:
       //Trastornos del Sueño
-      url = "php/psicologia/adultos/trastornos_del_sueño.php";
+      url = "php/psicologia/adultos/trastornos_del_suenio.php";
       break;
     case 13:
       //Trastornos de Ansiedad
-      url = "php/psicologia/adultos/trastorno_ansiedad.php";
+      url = "php/psicologia/adultos/trastornos_de_ansiedad.php";
       break;
     case 14:
       //Esquizofrenia y otros trastornos psicóticos
@@ -94,7 +98,7 @@ function click_event (argument) {
       break;
     case 17:
       //Trastornos de personalidad/rasgos disfuncionales
-      url = "php/adultos/trastornos_de_personalidad.php";
+      url = "php/psicologia/adultos/trastornos_de_personalidad.php";
       break;
     case 18:
       url = "php/ginecologia/control_y_seguimiento_embarazo.php";
@@ -112,7 +116,7 @@ function click_event (argument) {
       url = "php/ginecologia/anticoncepcion.php";
       break;
     case 23:
-      url = "php/ginecologia/menopausia";
+      url = "php/ginecologia/menopausia.php";
       break;
     case 24:
       url = "php/ginecologia/diagnostico_precoz_cancer.php";
@@ -124,17 +128,6 @@ function click_event (argument) {
       url = "php/ginecologia/revision_ginecologica.php";
       break;
   }
-  /*
-  if(argument === 3 || argument === 1) {
-    loadXMLDoc(url, function()
-    {
-      if (xmlhttp.readyState === 4 && xmlhttp.status === 200)
-      {
-        document.getElementById("contenido").innerHTML = xmlhttp.responseText;
-        accordion();
-      }
-    });
-  } else {*/
   loadXMLDoc(url, function()
   {
     if (xmlhttp.readyState === 4 && xmlhttp.status === 200)
@@ -142,7 +135,6 @@ function click_event (argument) {
       document.getElementById("contenido").innerHTML = xmlhttp.responseText;
     }
   });
-  //}
   quitarFoco(argument.toString());
 }
 function loadXMLDoc(url,cfunc) {
